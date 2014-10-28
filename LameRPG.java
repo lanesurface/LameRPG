@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class LameRPG{
+public class LameRPG {
 	static int StatRoll(boolean Pro) {
 		if (Pro == true) {
 			return (((int) (Math.random() * 7) + 1) + 2);
@@ -12,7 +12,8 @@ public class LameRPG{
 			return ((int)(Math.random() * 7) + 1);
 		}
 	}
-	static int AI(String monster, int EStr, int ELuc, int EMag, int EHP, int EMP, int EcurrentHP){
+	
+	static int AI(String monster, int EStr, int ELuc, int EMag, int EHP, int EMP, int EcurrentHP) {
 		int Edamage = 0;
 		
 		if (monster.equals("Rat")) {
@@ -70,7 +71,7 @@ public class LameRPG{
 		}
 	}
 
-	static void anyNew(int Level){
+	static void anyNew(int Level) {
 		switch (Level) {
 		case 2:
 			System.out.println("Congratulations, you unlocked the Lightning Spell!!");
@@ -92,13 +93,15 @@ public class LameRPG{
 			return;
 		}
 	}
+	
 	static int statGrowth(int Luc, String Per) {
 		int ret = (int) ((Math.random()* 3) + (Luc / 20 + 1));
 		System.out.println("Your "+ Per + " stat went up by " + ret + " points!!");
 		
 		return ret;
 	}
-	static String encounter(int x){
+	
+	static String encounter(int x) {
 		switch (x){
 		case 1:
 			return "Rat";
@@ -121,7 +124,7 @@ public class LameRPG{
 		}
 	}
 
-	static int Fight(String x, String Para){
+	static int Fight(String x, String Para) {
 		if (x.equals("Rat")) {
 			switch (Para) {
 			case "EStr":
@@ -272,7 +275,7 @@ public class LameRPG{
 		}
 	}
 
-	static void Magic(int level){
+	static void Magic(int level) {
 		switch (level){
 		case 1 :
 			System.out.println("Spell list (choose one) Fireball(1MP)");
